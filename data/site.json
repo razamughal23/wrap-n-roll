@@ -1,0 +1,23 @@
+{
+  "name": "Wrap & Roll",
+  "tagline": "Eat Well, Feel Well",
+  "heroTitle": "EAT WELL,\nFEEL WELL.",
+  "heroSubtitle": "Freshly rolled wraps, wood-fired pizzas, crispy zingers and loaded fries — hot at your door till 3 AM.",
+  "heroBadge": "Karim Park · Lahore · Free Delivery",
+  "whatsappNumber": "923000500811",
+  "phone1": "0300-0500811",
+  "phone2": "0324-9191229",
+  "address": "Shop # 2, Block #3, Farooqi Girls High School Near Karachi Store, Karim Park, Ravi Road, Lahore",
+  "hours": "Mon–Sun · 5PM to 3AM",
+  "googleRating": "4.4",
+  "googleReviewCount": 7,
+  "freeDelivery": true,
+  "highlights": [
+    { "name": "Signature Pizzas", "desc": "12 varieties — from Cheese Lover to Lazania.", "image": "/images/pizza.jpg", "href": "/menu#pizzas" },
+    { "name": "Shawarma & Platters", "desc": "Simple, Zinger, Jumbo, Pita Special.", "image": "/images/shawarma.jpg", "href": "/menu#shawarma" },
+    { "name": "Wraps & Twisters", "desc": "Mexican Wrap, W&R Special, Crispy.", "image": "/images/wrap.jpg", "href": "/menu#wraps" },
+    { "name": "Burgers", "desc": "Zinger, Double Zinger, Crazy Beef.", "image": "/images/burger.jpg", "href": "/menu#burgers" },
+    { "name": "Loaded Fries", "desc": "Cheesy, jalapeño-topped, done right.", "image": "/images/fries.jpg", "href": "/menu#potato" },
+    { "name": "Value Deals", "desc": "Family deals starting from Rs. 450.", "image": "/images/pizza.jpg", "href": "/menu#deals" }
+  ]
+}

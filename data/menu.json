@@ -1,0 +1,146 @@
+{
+  "categories": [
+    {
+      "id": "pizzas",
+      "title": "Pizzas",
+      "image": "/images/pizza.jpg",
+      "items": [
+        { "name": "Cheese Lover", "price": "S 450 / M 850 / L 1400 / XL 1800", "desc": "Mozzarella cheese and Wrap & Roll pizza sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Chicken Tikka", "price": "S 450 / M 850 / L 1400 / XL 1800", "desc": "Chicken tikka, onions, cheese & sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Chicken Fajita", "price": "S 450 / M 850 / L 1400 / XL 1800", "desc": "Chicken fajita, onions, green peppers, cheese & sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Hot & Spicy", "price": "S 500 / M 900 / L 1500 / XL 1900", "desc": "Mexican chicken, onion, green peppers, red chillies, cheese & sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Veggie Lover", "price": "S 500 / M 900 / L 1500 / XL 1900", "desc": "Onions, green pepper, mushrooms, black olives, jalapenos, sweet corn, cheese & pizza sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Mexican Madness", "price": "S 500 / M 900 / L 1500 / XL 1900", "desc": "Mexican chicken, onions, green peppers, jalapenos, cheese & pizza sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Chicken Supreme", "price": "S 500 / M 900 / L 1500 / XL 1900", "desc": "Chicken sausages, tikka, onions, peppers, mushrooms, olives, corn, cheese & pizza sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Malai Boti Pizza", "price": "M 1100 / L 1700 / XL 2200", "desc": "Malai boti chicken, green peppers, onions, cheese and special sauce.", "image": "/images/pizza.jpg" },
+        { "name": "Cheese Stuffed", "price": "M 1100 / L 1700 / XL 2200", "desc": "Chicken tikka, fajita, green pepper, onions, chillies & sausages.", "image": "/images/pizza.jpg" },
+        { "name": "Kebab Stuffed", "price": "M 1100 / L 1700 / XL 2200", "desc": "Chicken tikka, sausages, onions, tomato topped with mayonnaise.", "image": "/images/pizza.jpg" },
+        { "name": "Crown Crust", "price": "M 1100 / L 1700 / XL 2200", "desc": "Chicken kebab, green pepper, onions, green chillies.", "image": "/images/pizza.jpg" },
+        { "name": "Lazania Pizza", "price": "M 1200 / L 1800 / XL 2300", "desc": "Pizza sauce, double layer cheese, double chicken, capsicum, olive, jalapeno, special sauce.", "image": "/images/pizza.jpg" }
+      ]
+    },
+    {
+      "id": "deals",
+      "title": "Deals",
+      "image": null,
+      "items": [
+        { "name": "Deal 1", "price": "Rs. 950", "desc": "2 Small Pizzas + 1 Half Ltr Bottle", "image": null },
+        { "name": "Deal 2", "price": "Rs. 450", "desc": "1 Zinger Burger + Fries + 345ml Bottle", "image": null },
+        { "name": "Deal 3", "price": "Rs. 2399", "desc": "1 Large Pizza + 2 Zinger Burgers + 1 Regular Fries + 1.5 Ltr Bottle", "image": null },
+        { "name": "Deal 4", "price": "Rs. 1450", "desc": "2 Mexican Wraps + 1 Tortilla Wrap + 1.5 Ltr Bottle", "image": null },
+        { "name": "Deal 5", "price": "Rs. 2700", "desc": "1 XL Pizza + 1 BBQ Sandwich + 1 Small Loaded Fries + 5 Wings + 1.5 Ltr Bottle", "image": null }
+      ]
+    },
+    {
+      "id": "shawarma",
+      "title": "Shawarma",
+      "image": "/images/shawarma.jpg",
+      "items": [
+        { "name": "Simple Shawarma", "price": "Rs. 250", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Zinger Shawarma", "price": "Rs. 330", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Pocket Shawarma", "price": "Rs. 350", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Platter Shawarma", "price": "S Rs. 500 / L Rs. 600", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Jumbo Shawarma", "price": "Rs. 400", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Chicken Cheese", "price": "Rs. 300", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Jumbo Quesadila", "price": "Rs. 650", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Cheesy Quesadila", "price": "Rs. 450", "desc": null, "image": "/images/shawarma.jpg" },
+        { "name": "Pita Jumbo Special", "price": "Rs. 450", "desc": null, "image": "/images/shawarma.jpg" }
+      ]
+    },
+    {
+      "id": "wraps",
+      "title": "Wraps",
+      "image": "/images/wrap.jpg",
+      "items": [
+        { "name": "Classic Cheese Wrap", "price": "Rs. 500", "desc": "Special bread, cheese, chicken, onions, green pepper & sauce.", "image": "/images/wrap.jpg" },
+        { "name": "Mexican Wrap", "price": "Rs. 500", "desc": "Special bread, mustard sauce, hot sauce, green chillies, jalapeno, cheese, chicken, black olives & sauce.", "image": "/images/wrap.jpg" },
+        { "name": "Wrap & Roll Special", "price": "Rs. 600", "desc": "Chicken sausages, tikka, onion, green pepper, mushroom, black olives, cheese, fries & sauce.", "image": "/images/wrap.jpg" },
+        { "name": "Crispy Wrap (Twister)", "price": "Rs. 450", "desc": null, "image": "/images/wrap.jpg" },
+        { "name": "Tortilla Wrap", "price": "Rs. 450", "desc": null, "image": "/images/wrap.jpg" },
+        { "name": "Cheese Tortilla Wrap", "price": "Rs. 500", "desc": null, "image": "/images/wrap.jpg" }
+      ]
+    },
+    {
+      "id": "burgers",
+      "title": "Burgers",
+      "image": "/images/burger.jpg",
+      "items": [
+        { "name": "Chicken Patty Burger", "price": "Rs. 350", "desc": "Chicken patty, lettuce and mayo.", "image": "/images/burger.jpg" },
+        { "name": "Zinger Burger", "price": "Rs. 400", "desc": "Crunchy chicken fillet, lettuce and mayo.", "image": "/images/burger.jpg" },
+        { "name": "Tender Crunch Burger", "price": "Rs. 400", "desc": "Crispy tender fillet, lettuce, jalapenos, cheese slice, chipotle sauce.", "image": "/images/burger.jpg" },
+        { "name": "Cheese & Jalapeno", "price": "Rs. 450", "desc": "Double grill chicken patty, cheese, tomato, onion rings, lettuce, jalapeno.", "image": "/images/burger.jpg" },
+        { "name": "Double Zinger Burger", "price": "Rs. 650", "desc": "Double crunchy chicken fillet, cheese slice, lettuce, mustard sauce and mayo.", "image": "/images/burger.jpg" },
+        { "name": "Crazy Beef", "price": "Rs. 600", "desc": "Grill beef patty, cheese slice and jalapeno sauce.", "image": "/images/burger.jpg" },
+        { "name": "Passionate Punch", "price": "Rs. 500", "desc": "Grill beef patty, cheese, tomato, onion rings, lettuce, jalapeno, thousand island sauce.", "image": "/images/burger.jpg" },
+        { "name": "Grill Delight", "price": "Rs. 650", "desc": "Double grilled beef patty, cheese, onion ring, lettuce, jalapeno and BBQ sauce.", "image": "/images/burger.jpg" }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "title": "Sandwiches",
+      "image": null,
+      "items": [
+        { "name": "Classic Sandwich", "price": "Rs. 400", "desc": null, "image": null },
+        { "name": "Mexican Grilled", "price": "Rs. 350", "desc": null, "image": null },
+        { "name": "BBQ Chicken", "price": "Rs. 400", "desc": null, "image": null }
+      ]
+    },
+    {
+      "id": "sides",
+      "title": "Side Orders",
+      "image": "/images/fries.jpg",
+      "items": [
+        { "name": "Hot Wings (10 pcs)", "price": "Rs. 500", "desc": null, "image": null },
+        { "name": "Hot Wings (5 pcs)", "price": "Rs. 250", "desc": null, "image": null },
+        { "name": "Nuggets (10 pcs)", "price": "Rs. 400", "desc": null, "image": null },
+        { "name": "Nuggets (5 pcs)", "price": "Rs. 250", "desc": null, "image": null },
+        { "name": "Fried Thai Piece", "price": "Rs. 270", "desc": null, "image": null },
+        { "name": "Cheese Slice", "price": "Rs. 50", "desc": null, "image": null }
+      ]
+    },
+    {
+      "id": "potato",
+      "title": "Potato Break",
+      "image": "/images/fries.jpg",
+      "items": [
+        { "name": "Regular Fries", "price": "Rs. 200", "desc": null, "image": "/images/fries.jpg" },
+        { "name": "Large Fries", "price": "Rs. 300", "desc": null, "image": "/images/fries.jpg" },
+        { "name": "Family Fries", "price": "Rs. 400", "desc": null, "image": "/images/fries.jpg" },
+        { "name": "Loaded Fries (Small)", "price": "Rs. 400", "desc": null, "image": "/images/fries.jpg" },
+        { "name": "Loaded Fries (Large)", "price": "Rs. 600", "desc": null, "image": "/images/fries.jpg" }
+      ]
+    },
+    {
+      "id": "pastas",
+      "title": "Pastas",
+      "image": null,
+      "items": [
+        { "name": "Creamy Pasta", "price": "Rs. 450", "desc": "Chicken chunks, capsicum, olives, chicken sausages & white sauce.", "image": null },
+        { "name": "Crunchy Pasta", "price": "Rs. 550", "desc": "Crispy chicken chunks, capsicum, olives, chicken sausages & white sauce.", "image": null }
+      ]
+    },
+    {
+      "id": "rolls",
+      "title": "Rolls",
+      "image": null,
+      "items": [
+        { "name": "Spring Roll", "price": "Rs. 400", "desc": null, "image": null },
+        { "name": "Malai Roll", "price": "Rs. 350", "desc": null, "image": null },
+        { "name": "Chicken Paratha Roll", "price": "Rs. 300", "desc": null, "image": null },
+        { "name": "Twister Paratha Roll", "price": "Rs. 400", "desc": null, "image": null }
+      ]
+    },
+    {
+      "id": "dips",
+      "title": "Dips",
+      "image": null,
+      "items": [
+        { "name": "Chipotle", "price": "Rs. 50", "desc": null, "image": null },
+        { "name": "Plain Mayo", "price": "Rs. 50", "desc": null, "image": null },
+        { "name": "Garlic Mayo", "price": "Rs. 50", "desc": null, "image": null },
+        { "name": "Thousand Island", "price": "Rs. 50", "desc": null, "image": null },
+        { "name": "BBQ", "price": "Rs. 50", "desc": null, "image": null }
+      ]
+    }
+  ]
+}

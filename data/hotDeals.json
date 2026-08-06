@@ -1,0 +1,23 @@
+[
+  {
+    "t": "DEAL 1",
+    "p": "Rs. 950",
+    "d": "2 Small Pizzas + Half Ltr Bottle"
+  },
+  { "t": "DEAL 2", "p": "Rs. 450", "d": "Zinger Burger + Fries + 345ml" },
+  {
+    "t": "DEAL 3",
+    "p": "Rs. 2399",
+    "d": "Large Pizza + 2 Zingers + Fries + 1.5L"
+  },
+  {
+    "t": "DEAL 4",
+    "p": "Rs. 1450",
+    "d": "2 Mexican Wrap + Tortilla + 1.5L"
+  },
+  {
+    "t": "DEAL 5",
+    "p": "Rs. 2700",
+    "d": "XL Pizza + Sandwich + Fries + 5 Wings + 1.5L"
+  }
+]
