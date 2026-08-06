@@ -19,9 +19,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${siteData.name} — ${siteData.tagline} | Karim Park, Lahore`,
   description: `${siteData.name} Lahore — pizzas, shawarma, wraps, burgers, loaded fries & deals. Free delivery, open ${siteData.hours}. Order on WhatsApp.`,
-
   manifest: "/manifest.json",
-
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: siteData.name,
+  },
   icons: {
     icon: [
       {
@@ -37,13 +40,6 @@ export const metadata: Metadata = {
     ],
     apple: "/icons/icon-192.png",
   },
-
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: siteData.name,
-  },
-
   openGraph: {
     title: `${siteData.name} — Fast Food in Karim Park, Lahore`,
     description:
