@@ -22,6 +22,22 @@ export const metadata: Metadata = {
 
   manifest: "/manifest.json",
 
+  icons: {
+    icon: [
+      {
+        url: "/icons/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/icons/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    apple: "/icons/icon-192.png",
+  },
+
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -33,11 +49,14 @@ export const metadata: Metadata = {
     description:
       "Pizzas, shawarma, wraps, burgers & deals. Free delivery. Order now on WhatsApp.",
     type: "website",
+    locale: "en_PK",
   },
 };
 
 export const viewport: Viewport = {
   themeColor: "#e12e30",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
