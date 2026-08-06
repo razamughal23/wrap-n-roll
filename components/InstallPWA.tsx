@@ -1,22 +1,36 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Button } from "@mui/material";
+import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
+
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{
+    outcome: "accepted" | "dismissed";
+  }>;
+}
 
 export default function InstallPWA() {
-  const [prompt, setPrompt] = useState<any>(null);
+  const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
 
   useEffect(() => {
-    window.addEventListener("beforeinstallprompt", (e: any) => {
+    const handler = (e: Event) => {
       e.preventDefault();
-      setPrompt(e);
-    });
+      setPrompt(e as BeforeInstallPromptEvent);
+    };
+
+    window.addEventListener("beforeinstallprompt", handler);
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handler);
+    };
   }, []);
 
-  const install = async () => {
+  const installApp = async () => {
     if (!prompt) return;
 
-    prompt.prompt();
-
+    await prompt.prompt();
     await prompt.userChoice;
 
     setPrompt(null);
@@ -24,5 +38,21 @@ export default function InstallPWA() {
 
   if (!prompt) return null;
 
-  return <button onClick={install}>Download App</button>;
+  return (
+    <Button
+      variant="contained"
+      color="error"
+      startIcon={<DownloadRoundedIcon />}
+      onClick={installApp}
+      fullWidth
+      sx={{
+        mt: 2,
+        borderRadius: 2,
+        fontWeight: 700,
+        py: 1.2,
+      }}
+    >
+      Download App
+    </Button>
+  );
 }
