@@ -127,3 +127,25 @@ npm run build
 | Zustand | 5 | Cart state + localStorage |
 | Lucide React | latest | Icons |
 | TypeScript | 5 | Type safety |
+
+## 📍 Delivery Radius
+
+Every WhatsApp order entry point first asks for the customer’s browser location.
+Orders are allowed only within the configured radius around the restaurant.
+
+To update the restaurant point or radius, edit `data/site.json`:
+
+```json
+"delivery": {
+  "radiusKm": 5,
+  "center": {
+    "latitude": 31.5927,
+    "longitude": 74.3075
+  },
+  "message": "We deliver within a 5KM radius of Wrap & Roll, Karim Park, Lahore."
+}
+```
+
+If the customer is outside the radius, WhatsApp is not opened and the site clearly
+shows that delivery is limited to 5KM. The same flow works in the installed PWA
+because it uses the same Next.js App Router components.

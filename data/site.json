@@ -9,6 +9,14 @@
   "phone2": "0324-9191229",
   "address": "Shop # 2, Block #3, Farooqi Girls High School Near Karachi Store, Karim Park, Ravi Road, Lahore",
   "hours": "Mon–Sun · 5PM to 3AM",
+  "delivery": {
+    "radiusKm": 5,
+    "center": {
+      "latitude": 31.5927,
+      "longitude": 74.3075
+    },
+    "message": "We deliver within a 5KM radius of Wrap & Roll, Karim Park, Lahore."
+  },
   "googleRating": "4.4",
   "googleReviewCount": 7,
   "freeDelivery": true,

@@ -7,7 +7,7 @@ import {
   HOURS,
 } from "@/lib/whatsapp";
 import siteData from "@/data/site.json";
-import InstallPWA from "@/components/InstallPWA";
+import { LocationGate } from "@/components/LocationGate";
 
 export function Footer() {
   return (
@@ -21,14 +21,12 @@ export function Footer() {
             {siteData.tagline}. Serving Karim Park with pizzas, shawarma, wraps,
             burgers and deals.
           </p>
-          <a
-            href={whatsappOrderUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
+          <LocationGate
+            orderUrl={whatsappOrderUrl()}
             className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-5 py-2.5 text-sm font-semibold text-white shadow-card hover:opacity-90"
           >
             <WhatsAppIcon className="h-4 w-4" /> Order on WhatsApp
-          </a>
+          </LocationGate>
         </div>
         <div>
           <div className="font-display text-lg tracking-wider text-primary">
@@ -62,9 +60,6 @@ export function Footer() {
           <p className="mt-3 text-sm text-secondary-foreground/80 leading-relaxed">
             {ADDRESS}
           </p>
-          <div className="mt-6">
-            <InstallPWA />
-          </div>
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs text-secondary-foreground/50">

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { ShoppingCart, Check } from "lucide-react";
 import { useCartStore } from "@/store/cart";
 import { parsePrice, type PriceOption } from "@/lib/priceUtils";
@@ -18,6 +19,27 @@ export function AddToCartButton({ name, price, image, category }: Props) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<PriceOption | null>(null);
   const [added, setAdded] = useState(false);
+  const [portalReady, setPortalReady] = useState(false);
+
+  useEffect(() => {
+    setPortalReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        setSelected(null);
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   function flash() {
     setAdded(true);
@@ -54,7 +76,7 @@ export function AddToCartButton({ name, price, image, category }: Props) {
         {added ? <><Check className="h-3.5 w-3.5" /> Added!</> : <><ShoppingCart className="h-3.5 w-3.5" /> Add to Cart</>}
       </button>
 
-      {open && (
+      {open && portalReady && createPortal(
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" role="dialog" aria-modal="true">
           {/* Backdrop */}
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => { setOpen(false); setSelected(null); }} />
@@ -94,7 +116,8 @@ export function AddToCartButton({ name, price, image, category }: Props) {
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import siteData from "@/data/site.json";
+import InstallPWA from "@/components/InstallPWA";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -62,7 +63,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <InstallPWA />
+      </body>
     </html>
   );
 }

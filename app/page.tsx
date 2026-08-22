@@ -9,6 +9,7 @@ import siteData from "@/data/site.json";
 import dealsData from "@/data/deals.json";
 import hotDealsData from "@/data/hotDeals.json";
 import reviewsData from "@/data/reviews.json";
+import { LocationGate } from "@/components/LocationGate";
 
 export default function Home() {
   const {
@@ -59,14 +60,12 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href={whatsappOrderUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <LocationGate
+              orderUrl={whatsappOrderUrl()}
               className="inline-flex items-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.03] active:scale-95"
             >
               <WhatsAppIcon className="h-5 w-5" /> Order on WhatsApp
-            </a>
+            </LocationGate>
             <Link
               href="/menu"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/8 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/15"
@@ -117,11 +116,9 @@ export default function Home() {
           {/* Deal cards grid */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {dealsData.map((deal, idx) => (
-              <a
+              <LocationGate
                 key={deal.id}
-                href={whatsappOrderUrl(`${deal.title} — ${deal.description}`)}
-                target="_blank"
-                rel="noopener noreferrer"
+                orderUrl={whatsappOrderUrl(`${deal.title} — ${deal.description}`)}
                 className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/8 bg-white/5 p-5 backdrop-blur transition hover:border-primary hover:bg-primary/10 hover:-translate-y-1 active:scale-95"
               >
                 {/* Popular / badge pill */}
@@ -160,7 +157,7 @@ export default function Home() {
                     <WhatsAppIcon className="h-3 w-3" /> Order
                   </span>
                 </div>
-              </a>
+              </LocationGate>
             ))}
           </div>
         </div>
@@ -233,11 +230,9 @@ export default function Home() {
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {hotDealsData?.map((d) => (
-              <a
+              <LocationGate
                 key={d.t}
-                href={whatsappOrderUrl(d.t + " — " + d.d)}
-                target="_blank"
-                rel="noopener noreferrer"
+                orderUrl={whatsappOrderUrl(d.t + " — " + d.d)}
                 className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-primary hover:bg-primary/10"
               >
                 <div className="flex items-baseline justify-between">
@@ -252,7 +247,7 @@ export default function Home() {
                 <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary opacity-0 transition group-hover:opacity-100">
                   Order now <WhatsAppIcon className="h-3.5 w-3.5" />
                 </div>
-              </a>
+              </LocationGate>
             ))}
           </div>
         </div>
@@ -312,15 +307,13 @@ export default function Home() {
             Tap once. We&apos;ll bring the flavour. Free delivery in Karim Park.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={whatsappOrderUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <LocationGate
+              orderUrl={whatsappOrderUrl()}
               className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-secondary shadow-glow transition hover:scale-[1.03] active:scale-95"
             >
               <WhatsAppIcon className="h-5 w-5 text-[var(--color-whatsapp)]" />{" "}
               Order on WhatsApp
-            </a>
+            </LocationGate>
             <Link
               href="/menu"
               className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-8 py-4 text-base font-semibold text-white transition hover:bg-white/10"

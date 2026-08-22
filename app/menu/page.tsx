@@ -8,6 +8,7 @@ import { AddToCartButton } from "@/components/AddToCartButton";
 import { whatsappOrderUrl } from "@/lib/whatsapp";
 import menuData from "@/data/menu.json";
 import siteData from "@/data/site.json";
+import { LocationGate } from "@/components/LocationGate";
 
 export const metadata: Metadata = {
   title: `Menu — ${siteData.name} | Pizzas, Shawarma, Wraps, Burgers`,
@@ -61,16 +62,14 @@ export default function MenuPage() {
                   {cat.title.toUpperCase()}
                 </h2>
               </div>
-              <a
-                href={whatsappOrderUrl(cat.title)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <LocationGate
+                orderUrl={whatsappOrderUrl(cat.title)}
                 className="shrink-0 inline-flex items-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-3 py-2 text-xs font-semibold text-white shadow-card hover:opacity-90 sm:px-4 sm:text-sm"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 <span className="hidden sm:inline">Order {cat.title}</span>
                 <span className="sm:hidden">Order</span>
-              </a>
+              </LocationGate>
             </div>
 
             {/* Items */}

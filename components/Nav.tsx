@@ -8,6 +8,7 @@ import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useCartStore } from "@/store/cart";
 import { whatsappOrderUrl } from "@/lib/whatsapp";
 import siteData from "@/data/site.json";
+import { LocationGate } from "@/components/LocationGate";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -61,15 +62,13 @@ export function Nav() {
           </Link>
 
           {/* WhatsApp CTA */}
-          <a
-            href={whatsappOrderUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
+          <LocationGate
+            orderUrl={whatsappOrderUrl()}
             className="hidden sm:inline-flex items-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-4 py-2 text-sm font-semibold text-white shadow-card transition hover:opacity-90 active:scale-95"
           >
             <WhatsAppIcon className="h-4 w-4" />
             Order on WhatsApp
-          </a>
+          </LocationGate>
 
           {/* Mobile hamburger */}
           <button
@@ -99,15 +98,12 @@ export function Nav() {
               {l.label}
             </Link>
           ))}
-          <a
-            href={whatsappOrderUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileOpen(false)}
+          <LocationGate
+            orderUrl={whatsappOrderUrl()}
             className="mt-2 flex items-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-4 py-3 text-sm font-semibold text-white"
           >
             <WhatsAppIcon className="h-4 w-4" /> Order on WhatsApp
-          </a>
+          </LocationGate>
         </div>
       )}
     </header>

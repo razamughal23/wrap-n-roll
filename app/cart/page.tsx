@@ -10,6 +10,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useCartStore } from "@/store/cart";
 import { whatsappCartOrderUrl } from "@/lib/whatsapp";
+import { LocationGate } from "@/components/LocationGate";
 
 export default function CartPage() {
   const items      = useCartStore((s) => s.items);
@@ -147,15 +148,13 @@ export default function CartPage() {
               >
                 Clear Cart
               </button>
-              <a
-                href={whatsappCartOrderUrl(items)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <LocationGate
+                orderUrl={whatsappCartOrderUrl(items)}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-8 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-90 active:scale-95"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Place Order on WhatsApp
-              </a>
+              </LocationGate>
             </div>
           </>
         )}
