@@ -26,6 +26,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
+The project includes an `.npmrc` that uses the public npm registry, so it can
+be installed locally on macOS, Windows, or Linux without Replit's internal
+package URLs.
+
 ---
 
 ## ✏️ How to Edit Content (JSON only — no code needed!)
