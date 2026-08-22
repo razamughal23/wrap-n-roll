@@ -13,6 +13,7 @@ Built with **Next.js 15 App Router**, Tailwind CSS v4, and Zustand.
 - 💬 WhatsApp checkout — formatted order message sent directly
 - 🔔 Cart badge in header with live count
 - 📱 **Fully mobile responsive** — hamburger nav, bottom-sheet size picker, responsive grids
+- 📲 Cross-platform PWA install popup + ready-to-scan QR code in `public/qr/`
 
 ---
 
@@ -149,3 +150,19 @@ To update the restaurant point or radius, edit `data/site.json`:
 If the customer is outside the radius, WhatsApp is not opened and the site clearly
 shows that delivery is limited to 5KM. The same flow works in the installed PWA
 because it uses the same Next.js App Router components.
+
+## 📲 PWA QR Code
+
+The ready-to-scan QR files are in `public/qr/install-qr.png` and
+`public/qr/install-qr.svg`. They open the configured `appUrl` from
+`data/site.json`.
+
+If the live website URL changes after deployment, regenerate the QR:
+
+```bash
+NEXT_PUBLIC_APP_URL=https://your-live-domain.com npm run generate:qr
+```
+
+Android users will get the direct **Download & Install App** button. iPhone users
+will see the Safari **Share → Add to Home Screen** method because iOS does not
+allow websites to trigger that installation action automatically.

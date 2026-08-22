@@ -30,7 +30,7 @@ export default function InstallPWA() {
     if (!standalone) {
       // A small delay keeps the install card from appearing before the page
       // has painted, especially when opened from the PWA launch URL.
-      const timer = window.setTimeout(() => setOpen(true), 500);
+      const timer = window.setTimeout(() => setOpen(true), 1800);
       return () => window.clearTimeout(timer);
     }
 

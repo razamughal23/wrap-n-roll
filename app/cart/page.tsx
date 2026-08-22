@@ -150,6 +150,7 @@ export default function CartPage() {
               </button>
               <LocationGate
                 orderUrl={whatsappCartOrderUrl(items)}
+                onAllowed={clearCart}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-8 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-90 active:scale-95"
               >
                 <WhatsAppIcon className="h-5 w-5" />

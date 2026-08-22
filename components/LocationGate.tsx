@@ -21,6 +21,7 @@ interface Props {
   orderUrl: string;
   className?: string;
   ariaLabel?: string;
+  onAllowed?: () => void;
 }
 
 function getLocationErrorMessage(error: GeolocationPositionError) {
@@ -38,6 +39,7 @@ export function LocationGate({
   orderUrl,
   className,
   ariaLabel,
+  onAllowed,
 }: Props) {
   const [state, setState] = useState<GateState>("closed");
   const [distance, setDistance] = useState<number | null>(null);
@@ -96,6 +98,7 @@ export function LocationGate({
   }
 
   function continueToWhatsApp() {
+    onAllowed?.();
     window.open(orderUrl, "_blank", "noopener,noreferrer");
     setState("closed");
   }

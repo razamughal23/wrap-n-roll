@@ -3,6 +3,7 @@ import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import siteData from "@/data/site.json";
 import InstallPWA from "@/components/InstallPWA";
+import LocationPrompt from "@/components/LocationPrompt";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -65,6 +66,7 @@ export default function RootLayout({
     <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`}>
       <body>
         {children}
+        <LocationPrompt />
         <InstallPWA />
       </body>
     </html>
