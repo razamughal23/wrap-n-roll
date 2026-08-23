@@ -8,10 +8,12 @@ import {
   distanceInKm,
   isWithinDeliveryRadius,
 } from "@/lib/delivery";
+import {
+  LOCATION_SESSION_KEY,
+  saveAllowedLocationSession,
+} from "@/lib/locationSession";
 
 type PromptState = "hidden" | "ready" | "checking" | "allowed" | "outside" | "error";
-
-const SESSION_KEY = "wrap-n-roll-location-checked";
 
 function getErrorMessage(error: GeolocationPositionError) {
   if (error.code === error.PERMISSION_DENIED) {
@@ -30,7 +32,7 @@ export default function LocationPrompt() {
 
   useEffect(() => {
     // Ask once per browser tab. The order button still verifies again before checkout.
-    if (window.sessionStorage.getItem(SESSION_KEY)) return;
+    if (window.sessionStorage.getItem(LOCATION_SESSION_KEY)) return;
     const timer = window.setTimeout(() => setState("ready"), 750);
     return () => window.clearTimeout(timer);
   }, []);
@@ -61,8 +63,9 @@ export default function LocationPrompt() {
       ({ coords }) => {
         const km = distanceInKm(coords.latitude, coords.longitude);
         setDistance(km);
-        window.sessionStorage.setItem(SESSION_KEY, "true");
-        setState(isWithinDeliveryRadius(coords.latitude, coords.longitude) ? "allowed" : "outside");
+        const allowed = isWithinDeliveryRadius(coords.latitude, coords.longitude);
+        if (allowed) saveAllowedLocationSession();
+        setState(allowed ? "allowed" : "outside");
       },
       (locationError) => {
         setError(getErrorMessage(locationError));
@@ -73,7 +76,7 @@ export default function LocationPrompt() {
   }
 
   function closePrompt() {
-    window.sessionStorage.setItem(SESSION_KEY, "dismissed");
+    window.sessionStorage.setItem(LOCATION_SESSION_KEY, "dismissed");
     setState("hidden");
   }
 

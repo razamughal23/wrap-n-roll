@@ -4,6 +4,7 @@ import "./globals.css";
 import siteData from "@/data/site.json";
 import InstallPWA from "@/components/InstallPWA";
 import LocationPrompt from "@/components/LocationPrompt";
+import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -68,6 +69,7 @@ export default function RootLayout({
         {children}
         <LocationPrompt />
         <InstallPWA />
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );

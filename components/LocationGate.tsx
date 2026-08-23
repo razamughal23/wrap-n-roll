@@ -13,6 +13,7 @@ import {
   distanceInKm,
   isWithinDeliveryRadius,
 } from "@/lib/delivery";
+import { hasAllowedLocationSession } from "@/lib/locationSession";
 
 type GateState = "closed" | "requesting" | "allowed" | "outside" | "error";
 
@@ -93,6 +94,11 @@ export function LocationGate({
 
   function openOrder(event: MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
+    if (hasAllowedLocationSession()) {
+      onAllowed?.();
+      window.open(orderUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
     setState("requesting");
     requestLocation();
   }
